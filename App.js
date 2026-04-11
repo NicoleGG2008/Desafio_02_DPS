@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, StatusBar } from "react-native";
+
+import { usePieces } from "./src/utils/usePieces";
+import PieceForm from "./src/components/PieceForm";
+import PieceList from "./src/components/PieceList";
 
 export default function App() {
+  const { pieces, addPiece, removePiece } = usePieces();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <View>
+        <PieceForm onAdd={addPiece} />
+        <PieceList pieces={pieces} onRemove={removePiece} />
+      </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
