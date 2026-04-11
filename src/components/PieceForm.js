@@ -107,47 +107,60 @@ export default function PieceForm({ onAdd, onCancel }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: "#f8f9fa",
+    padding: 25,
+    backgroundColor: "#eef2f7",
   },
+
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 15,
     textAlign: "center",
+    marginBottom: 25,
+    color: "#111",
   },
+
   label: {
-    marginBottom: 4,
-    fontWeight: "500",
+    marginBottom: 6,
+    fontWeight: "600",
+    color: "#333",
   },
+
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 6,
-    padding: 10,
-    marginBottom: 12,
+    borderColor: "#ddd",
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 18,
     backgroundColor: "white",
+    fontSize: 15,
+    elevation: 2,
   },
+
   button: {
-    backgroundColor: "#007bff",
-    paddingVertical: 12,
-    borderRadius: 6,
+    backgroundColor: "#2563eb",
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: "center",
     marginTop: 10,
+    elevation: 4,
   },
+
   buttonText: {
     color: "white",
-    textAlign: "center",
     fontWeight: "bold",
+    fontSize: 16,
   },
+
   cancelButton: {
-    marginTop: 10,
-    paddingVertical: 12,
-    borderRadius: 6,
-    backgroundColor: "#6c757d",
+    marginTop: 12,
+    paddingVertical: 14,
+    borderRadius: 12,
+    backgroundColor: "#6b7280",
+    alignItems: "center",
   },
+
   cancelText: {
     color: "white",
-    textAlign: "center",
     fontWeight: "bold",
   },
 });

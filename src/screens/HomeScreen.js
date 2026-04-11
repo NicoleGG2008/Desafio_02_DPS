@@ -95,77 +95,89 @@ export default function HomeScreen() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f7f8f9",
+    backgroundColor: "#eef2f7",
   },
+
   header: {
-    padding: 20,
-    backgroundColor: "#007bff",
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    paddingTop: 60,
+    paddingBottom: 25,
+    paddingHorizontal: 20,
+    backgroundColor: "#2563eb",
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    elevation: 6,
   },
+
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
     color: "white",
+    marginBottom: 10,
   },
+
   historyContainer: {
     flex: 1,
-    padding: 15,
+    padding: 20,
   },
+
   historyTitle: {
-    fontSize: 16,
-    fontWeight: "500",
-    marginBottom: 10,
+    fontSize: 18,
+    fontWeight: "600",
+    marginBottom: 15,
     color: "#333",
   },
+
   emptyText: {
     textAlign: "center",
+    marginTop: 40,
     color: "#888",
-    fontSize: 14,
+    fontSize: 16,
   },
+
   pieceItem: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 12,
-    paddingHorizontal: 10,
+    padding: 15,
     backgroundColor: "white",
-    borderRadius: 8,
-    marginBottom: 8,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    borderRadius: 15,
+    marginBottom: 12,
+    elevation: 4,
   },
+
   pieceMain: {
     flex: 1,
   },
+
   pieceType: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: "bold",
+    color: "#111",
   },
+
   pieceDate: {
-    fontSize: 12,
+    fontSize: 13,
     color: "#666",
+    marginTop: 4,
   },
+
   deleteButton: {
-    backgroundColor: "#d9534f",
-    paddingHorizontal: 16,
-    paddingVertical: 6,
-    borderRadius: 6,
+    backgroundColor: "#ef4444",
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 10,
   },
+
   deleteText: {
     color: "white",
     fontWeight: "bold",
   },
+
   modalContainer: {
     flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#f7f8f9",
+    backgroundColor: "#eef2f7",
   },
 });

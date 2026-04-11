@@ -15,14 +15,14 @@ export default function DeleteButton({ onPress }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "#d9534f",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 6,
-    marginLeft: 10,
+    backgroundColor: "#ef4444",
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 10,
   },
   text: {
     color: "white",
     fontWeight: "bold",
+    fontSize: 13,
   },
 });

@@ -64,56 +64,67 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0,0,0,0.4)",
   },
+
   modalContent: {
     width: "90%",
-    maxHeight: "70%",
+    maxHeight: "75%",
     backgroundColor: "white",
-    borderRadius: 12,
-    padding: 20,
-    elevation: 8,
+    borderRadius: 20,
+    padding: 25,
+    elevation: 10,
   },
+
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
     textAlign: "center",
-    marginBottom: 8,
+    marginBottom: 5,
   },
+
   subtitle: {
     fontSize: 14,
-    color: "#555",
+    color: "#777",
     textAlign: "center",
-    marginBottom: 16,
+    marginBottom: 20,
   },
+
   scroll: {
-    flex: 1,
+    marginBottom: 10,
   },
+
   detailRow: {
-    fontSize: 15,
-    marginBottom: 8,
+    fontSize: 16,
+    marginBottom: 10,
     lineHeight: 24,
   },
+
   label: {
     fontWeight: "bold",
+    color: "#333",
   },
+
   bottomButtons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 10,
+    marginTop: 15,
   },
+
   deleteBtn: {
-    backgroundColor: "#d9534f",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 6,
+    backgroundColor: "#ef4444",
+    paddingHorizontal: 25,
+    paddingVertical: 12,
+    borderRadius: 12,
   },
+
   closeBtn: {
-    backgroundColor: "#666",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 6,
+    backgroundColor: "#2563eb",
+    paddingHorizontal: 25,
+    paddingVertical: 12,
+    borderRadius: 12,
   },
+
   btnText: {
     color: "white",
     fontWeight: "bold",
