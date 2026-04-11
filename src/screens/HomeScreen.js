@@ -1,13 +1,10 @@
-
 import React, { useState } from "react";
 import {
   View,
   Text,
-  Button,
   FlatList,
   TouchableOpacity,
   Modal,
-  ScrollView,
   StyleSheet,
 } from "react-native";
 
@@ -32,20 +29,27 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Título y botón agregar */}
+      
+      {/* HEADER */}
       <View style={styles.header}>
         <Text style={styles.title}>Piezas</Text>
-        <Button
-          title="Agregar piezas"
+
+        <TouchableOpacity
+          style={styles.addButton}
           onPress={() => setShowForm(true)}
-        />
+        >
+          <Text style={styles.addButtonText}>+ Agregar pieza</Text>
+        </TouchableOpacity>
       </View>
 
-      {/* Historial de piezas */}
+      {/* HISTORIAL */}
       <View style={styles.historyContainer}>
         <Text style={styles.historyTitle}>Historial de piezas</Text>
+
         {pieces.length === 0 ? (
-          <Text style={styles.emptyText}>No hay piezas, agregue una</Text>
+          <Text style={styles.emptyText}>
+            No hay piezas, agregue una
+          </Text>
         ) : (
           <FlatList
             data={pieces}
@@ -59,6 +63,7 @@ export default function HomeScreen() {
                   <Text style={styles.pieceType}>{item.type}</Text>
                   <Text style={styles.pieceDate}>{item.date}</Text>
                 </View>
+
                 <TouchableOpacity
                   style={styles.deleteButton}
                   onPress={() => handleDelete(item.id)}
@@ -71,12 +76,8 @@ export default function HomeScreen() {
         )}
       </View>
 
-      {/* Modal: formulario agregar pieza */}
-      <Modal
-        visible={showForm}
-        animationType="slide"
-        transparent={false}
-      >
+      {/* MODAL FORMULARIO */}
+      <Modal visible={showForm} animationType="slide">
         <View style={styles.modalContainer}>
           <PieceForm
             onAdd={handleAddPiece}
@@ -85,7 +86,7 @@ export default function HomeScreen() {
         </View>
       </Modal>
 
-      {/* Modal: detalle de la pieza */}
+      {/* MODAL DETALLE */}
       <DetailModal
         isVisible={!!selectedPiece}
         onClose={() => setSelectedPiece(null)}
@@ -95,27 +96,41 @@ export default function HomeScreen() {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#eef2f7",
+    backgroundColor: "#F3F4F6",
   },
 
   header: {
     paddingTop: 60,
-    paddingBottom: 25,
+    paddingBottom: 30,
     paddingHorizontal: 20,
-    backgroundColor: "#2563eb",
+    backgroundColor: "#1F2937",
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
-    elevation: 6,
+    elevation: 8,
   },
 
   title: {
     fontSize: 28,
     fontWeight: "bold",
     color: "white",
-    marginBottom: 10,
+  },
+
+  addButton: {
+    marginTop: 15,
+    backgroundColor: "#22C55E",
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: "center",
+  },
+
+  addButtonText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 16,
   },
 
   historyContainer: {
@@ -127,13 +142,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     marginBottom: 15,
-    color: "#333",
+    color: "#1F2937",
   },
 
   emptyText: {
     textAlign: "center",
     marginTop: 40,
-    color: "#888",
+    color: "#6B7280",
     fontSize: 16,
   },
 
@@ -155,17 +170,17 @@ const styles = StyleSheet.create({
   pieceType: {
     fontSize: 17,
     fontWeight: "bold",
-    color: "#111",
+    color: "#111827",
   },
 
   pieceDate: {
     fontSize: 13,
-    color: "#666",
+    color: "#6B7280",
     marginTop: 4,
   },
 
   deleteButton: {
-    backgroundColor: "#ef4444",
+    backgroundColor: "#EF4444",
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 10,
@@ -178,6 +193,6 @@ const styles = StyleSheet.create({
 
   modalContainer: {
     flex: 1,
-    backgroundColor: "#eef2f7",
+    backgroundColor: "#F3F4F6",
   },
 });

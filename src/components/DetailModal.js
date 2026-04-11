@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.4)",
+    backgroundColor: "rgba(0,0,0,0.5)",
   },
 
   modalContent: {
@@ -81,11 +81,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 5,
+    color: "#1F2937",
   },
 
   subtitle: {
     fontSize: 14,
-    color: "#777",
+    color: "#6B7280",
     textAlign: "center",
     marginBottom: 20,
   },
@@ -98,11 +99,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
     lineHeight: 24,
+    color: "#374151",
   },
 
   label: {
     fontWeight: "bold",
-    color: "#333",
+    color: "#1F2937",
   },
 
   bottomButtons: {
@@ -112,14 +114,14 @@ const styles = StyleSheet.create({
   },
 
   deleteBtn: {
-    backgroundColor: "#ef4444",
+    backgroundColor: "#EF4444",
     paddingHorizontal: 25,
     paddingVertical: 12,
     borderRadius: 12,
   },
 
   closeBtn: {
-    backgroundColor: "#2563eb",
+    backgroundColor: "#2563EB",
     paddingHorizontal: 25,
     paddingVertical: 12,
     borderRadius: 12,
